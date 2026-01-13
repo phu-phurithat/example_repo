@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 image:
-  repository: asia.gcr.io/loki-gcs/demo
+  repository: asia.gcr.io/lodash-devops-test-475808/demo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v1.0.0"
@@ -14,14 +14,14 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
   hosts:
-    - host: demo-production.gpevn.com
+    - host: demo-production.devenvphu.men
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - secretName: demo-production-tls
       hosts:
-        - demo-production.gpevn.com
+        - demo-production.devenvphu.men
 
 replicaCount: 1
 
